@@ -42,5 +42,9 @@ func main() {
 		return c.SendFile(path)
 	})
 
+	s.Get("*", func(c *fiber.Ctx) error {
+		return c.SendStatus(fiber.StatusNotFound)
+	})
+
 	log.Fatal(s.Listen(privateIP + ":3000"))
 }
