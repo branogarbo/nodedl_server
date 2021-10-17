@@ -9,7 +9,6 @@ import (
 
 func main() {
 	s := fiber.New(fiber.Config{
-		Prefork: true,
 		GETOnly: true,
 	})
 
